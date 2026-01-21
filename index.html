@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkDraft AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a1a1aa;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #52525b;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #71717a;
+      }
+      
+      /* Typography Tweaks */
+      .prose {
+        max-width: none !important;
+      }
+      
+      /* Table Styles */
+      .prose table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+      }
+      .prose th, .prose td {
+        padding: 0.75rem;
+        border: 1px solid #e5e7eb; /* zinc-200 */
+      }
+      .dark .prose th, .dark .prose td {
+        border-color: #3f3f46; /* zinc-700 */
+      }
+      .prose th {
+        background-color: #f4f4f5; /* zinc-100 */
+        font-weight: 600;
+        text-align: left;
+      }
+      .dark .prose th {
+        background-color: #27272a; /* zinc-800 */
+        color: #e4e4e7;
+      }
+      
+      /* Code Block Styles */
+      .prose pre {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        overflow-x: visible; /* Handled by wrapper */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.1",
+    "react-syntax-highlighter": "https://esm.sh/react-syntax-highlighter@15.5.0?external=react,react-dom",
+    "react-syntax-highlighter/dist/esm/styles/prism": "https://esm.sh/react-syntax-highlighter@15.5.0/dist/esm/styles/prism?external=react,react-dom",
+    "react-syntax-highlighter/": "https://esm.sh/react-syntax-highlighter@^16.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-200">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
