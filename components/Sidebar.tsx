@@ -33,9 +33,9 @@ const Sidebar: React.FC<SidebarProps> = ({
 
       <div className={`
         fixed md:static inset-y-0 left-0 z-30
-        w-72 bg-zinc-50 dark:bg-zinc-950 border-r border-zinc-200 dark:border-zinc-800
-        transform transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none
-        ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
+        bg-zinc-50 dark:bg-zinc-950 border-r border-zinc-200 dark:border-zinc-800
+        transform transition-all duration-300 ease-in-out shadow-2xl md:shadow-none
+        ${isOpen ? 'translate-x-0 w-72' : '-translate-x-full md:translate-x-0 md:w-0 md:border-none md:overflow-hidden'}
         flex flex-col h-full
       `}>
         {/* Header */}
