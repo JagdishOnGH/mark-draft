@@ -1,89 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MarkDraft AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              border: "hsl(var(--border))",
-              input: "hsl(var(--input))",
-              ring: "hsl(var(--ring))",
-              background: "hsl(var(--background))",
-              foreground: "hsl(var(--foreground))",
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['Fira Code', 'monospace'],
-            }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarkDraft AI - The Best Free AI Markdown Editor 2025</title>
+  <meta name="description"
+    content="Boost your productivity with MarkDraft AI. The ultimate open-source Markdown editor with built-in Gemini AI, smart auto-complete, live preview, and sync scroll. Completely free and developer-friendly." />
+  <meta name="keywords"
+    content="best markdown editor, free ai writing tool, gemini ai, chatgpt alternative, developer productivity, vs code alternative, open source react project, coding portfolio, 10x developer tools, javascript, typescript, vite, tailwind css, automated writing, content creation" />
+  <meta name="author" content="JagdishOnGH" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/JagdishOnGH/mark-draft" />
+  <meta property="og:title" content="MarkDraft AI - Intelligent Markdown Editor" />
+  <meta property="og:description"
+    content="Write smarter with AI assistance, live preview, and accurate sync scrolling." />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://github.com/JagdishOnGH/mark-draft" />
+  <meta property="twitter:title" content="MarkDraft AI - Intelligent Markdown Editor" />
+  <meta property="twitter:description"
+    content="Write smarter with AI assistance, live preview, and accurate sync scrolling." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
           }
         }
       }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-      /* Custom scrollbar for a cleaner look */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #a1a1aa;
-        border-radius: 4px;
-      }
-      .dark ::-webkit-scrollbar-thumb {
-        background: #52525b;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #71717a;
-      }
-      
-      /* Typography Tweaks */
-      .prose {
-        max-width: none !important;
-      }
-      
-      /* Table Styles */
-      .prose table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-      }
-      .prose th, .prose td {
-        padding: 0.75rem;
-        border: 1px solid #e5e7eb; /* zinc-200 */
-      }
-      .dark .prose th, .dark .prose td {
-        border-color: #3f3f46; /* zinc-700 */
-      }
-      .prose th {
-        background-color: #f4f4f5; /* zinc-100 */
-        font-weight: 600;
-        text-align: left;
-      }
-      .dark .prose th {
-        background-color: #27272a; /* zinc-800 */
-        color: #e4e4e7;
-      }
-      
-      /* Code Block Styles */
-      .prose pre {
-        background-color: transparent;
-        margin: 0;
-        padding: 0;
-        border-radius: 0;
-        overflow-x: visible; /* Handled by wrapper */
-      }
-    </style>
+    }
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Custom scrollbar for a cleaner look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #a1a1aa;
+      border-radius: 4px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #52525b;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #71717a;
+    }
+
+    /* Typography Tweaks */
+    .prose {
+      max-width: none !important;
+    }
+
+    /* Table Styles */
+    .prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    .prose th,
+    .prose td {
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      /* zinc-200 */
+    }
+
+    .dark .prose th,
+    .dark .prose td {
+      border-color: #3f3f46;
+      /* zinc-700 */
+    }
+
+    .prose th {
+      background-color: #f4f4f5;
+      /* zinc-100 */
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .dark .prose th {
+      background-color: #27272a;
+      /* zinc-800 */
+      color: #e4e4e7;
+    }
+
+    /* Code Block Styles */
+    .prose pre {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      overflow-x: visible;
+      /* Handled by wrapper */
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -100,10 +139,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-200">
-    <div id="root"></div>
+
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-200">
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
